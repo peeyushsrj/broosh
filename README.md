@@ -1,6 +1,8 @@
 broosh
 ------
 
+**Aim**: Make reading efficient; by reading less.
+
 command line html parser based on python3 beautiful Soap packages. 
 
 takes input from stdin. 

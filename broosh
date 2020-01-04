@@ -30,5 +30,11 @@ class HTParser:
 
 t = HTParser(sys.stdin)
 
-for arg in sys.argv:
-    t.print(t.look(arg))
+if sys.argv[1]==None or sys.argv[1]=="help":
+    print("usage: broosh <command> [<args>]")
+elif sys.argv[1]=="html":
+    for arg in sys.argv:
+        t.look(arg)
+elif sys.argv[1]=="text":
+    for arg in sys.argv:
+        t.print(t.look(arg))
