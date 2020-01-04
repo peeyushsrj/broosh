@@ -17,7 +17,7 @@ outputs to stdout.
 Get me h1, h2 tags:
 
 ```
-curl -s https://www.seeedstudio.com/blog/2019/09/29/top-20-best-raspberry-pi-4-projects-that-you-must-try-now/ | ./broosh h1 
+curl -s https://www.seeedstudio.com/blog/2019/09/29/top-20-best-raspberry-pi-4-projects-that-you-must-try-now/ | ./broosh h1 h2 | less
 ```
 
 *Play around and convert yourself to markdown too.*
