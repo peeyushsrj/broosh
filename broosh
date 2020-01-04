@@ -1,0 +1,34 @@
+#!/usr/bin/python3.6
+import urllib.request
+import sys
+from bs4 import BeautifulSoup
+
+#html_page = sys.stdin
+#page_soup = BeautifulSoup(html_page, "html.parser")
+#articles = page_soup.findAll("a")
+#for art in articles:
+#    print(art.text)
+#
+class HTParser:
+    def __init__(self, html_page):
+        self.html_page = html_page
+        self.html_parsed = BeautifulSoup(self.html_page, "html.parser")
+
+    def look(self, el, elclass=None):
+        return self.html_parsed.findAll(el,elclass)
+
+    def text(self, x):
+        d = []
+        for el in x:
+            d.append(el.text)
+        return d 
+
+    def print(self, x):
+        for el in x:
+            if el.text!=None:
+                print(el.text)
+
+t = HTParser(sys.stdin)
+
+for arg in sys.argv:
+    t.print(t.look(arg))
